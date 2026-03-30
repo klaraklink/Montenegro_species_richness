@@ -1,1 +1,28 @@
-# Montenegro_species_richness
+# Friesová et al. Forest herb-layer species richness in the western Balkan diversity hotspot
+
+## Supplementary code and data to the article:
+
+Friesová, K., Pustková, Š., Hubatka, P., Janišová, N., Nejeschlebová, K., Rohel, J., Sobotka, V., Šmerdová, E., Večeřa, M., Kadaš, D., Kopčan, B., Krejčová, M., Kučerová, A., Axmanová, I., Dřevojan, P., Janišová, M., Nikolei, R., Szokala, D., Stanišić-Vujačić, M., Stešević, D., Danihelka, J. & Chytrý, M. (Submitted). Forest herb-layer species richness in the western Balkan diversity hotspot.
+
+## Data
+
+The data contains information on herb-layer species richness of 342 forest vegetation plots in Montenegro. The survey was conducted in May 2022 (lower elevations in the southwestern part of the country), July 2023 (higher elevations in the northeast) and June 2025 (western and southwestern part of the country) by one research team including local specialists. Most plots were squares, but at a few sites with linearly developed vegetation, especially in narrow floodplains, we used rectangular plots to maximise the internal homogeneity of the sampled vegetation. All plots, both squared and rectangular, had an area of 100 m^2^ and were measured and marked in the field using a string. We recorded all vascular plant species in each plot.
+
+This dataset includes information on the number of vascular plant species in the herb layer of each plot and predictor variables used in the analysis. Covers of each vegetation layer (tree, shrub, herb and moss layer) were estimated in percentages. The cover of evergreen woody plants (Appendix S2) in the plot was calculated by summing the covers of individual species (estimated in nine-grade Braun-Blanquet scale and converted to to percentages representing the mean value of each interval) accounting for their overlap using Fischer’s formula (Fischer, 2015).
+
+Soil samples for pH measurements were taken from five locations in each plot (the centres of each plot quarter and the plot centre) and mixed within that plot. In plots with a high proportion of rocks, locations for taking the soil samples might have been slightly moved to a place with developed soil. The soil samples were collected from the mineral soil horizon at a depth of 5–10 cm below the litter layer. The samples were dried at room temperature, sieved (mesh size 2 mm), mixed into soil-distilled water suspension (weight ratio 1:2.5) and shaken in the Biosan PSU-10i orbital shaker for 5 minutes at 280 rpm. The pH was measured using the HQ40D digital multimeter (Hach Lange GmbH, Düsseldorf, Germany). Soil depth was measured in five places in each plot (the centres of each plot quarter and the plot centre). An arbitrary value of 30 cm was assigned to soils deeper than 30 cm. The five measurements were then averaged.
+
+The heat load index was calculated from the in-situ measured slope, aspect, and inclination using the formula from McCune and Keon (2002: Eq. 3). In addition, we included the terrain ruggedness index as a
+measure of topographic heterogeneity (Geomorpho90m, Amatulli et al., 2020). We also included climatic variables: the mean annual temperature, total annual precipitation and precipitation of the warmest quarter (CHELSA, Karger et al., 2017).
+
+We georeferenced the plots with a GNSS device in the middle of each plot with an accuracy of \~2–10 m. In addition, plots sampled in 2025 were permanently marked in the field using a nail with a magnet placed in the lower left corner along the slope of each plot to allow for more precise plot relocation in the future. Coordinates were measured in the same place where the magnet was placed.
+
+We classified our plots according to the dominant tree species into six forest types, which correspond to phytosociological syntaxa, as listed in the Habitat Catalogue of Montenegro (Milanović et al., 2021) and EuroVegChecklist (Mucina et al., 2016, nomenclature according to version 4 available at FloraVeg.EU; Chytrý et al., 2024). Plots with a cover of evergreen oaks (*Quercus coccifera* or *Q. ilex*) or *Laurus nobilis* of at least 10% were classified as Mediterranean evergreen *Quercus* forests (**evergreen oak**, n = 9). Plots dominated by thermophilous deciduous trees (at least 10% cover of *Carpinus betulus*, *Fraxinus ornus*, *Ostrya carpinifolia*, *Quercus cerris*, *Q. frainetto*, *Q. pubescens*, *Q. trojana* or *Tilia* spp. or more than 25% cover of *Carpinus orientalis*) were classified as submediterranean thermophilous deciduous forests (**mixed deciduous**, n = 209). Plots with at least 50% cover of *Fagus sylvatica* were classified as beech forests (**beech**, n = 66). Pine-dominated plots (cover of *Pinus* spp., except for *P. peuce*, more than 20%) were classified as pine forests (**pine**, n = 16). Plots with other dominant coniferous species (cover of *Abies alba*, *Picea abies* or *Pinus peuce* more than 20%) belonged to the montane coniferous forests (**fir and spruce**, n = 33). Plots dominated by *Pinus peuce* were classified into this group because *Pinus peuce* often co-occurs with *Picea abies,* and the herb layer of forests with these two dominant trees is similar. Plots dominated by *Alnus* spp., *Fraxinus excelsior* or *Salix* spp. (cover more than 10%) were classified as riparian forests (**riparian**, n = 9).
+
+The data are provided as a single csv file: `Montenegro_species_richness_data.csv`
+
+## Scripts
+
+`1_species_richness_glm.R`: Data exploration, generalized linear models with negative binomial distribution to assess the effects of individual predictors on herb-layer species richness, final visualization of the results.
+
+`2_distribution_map.R`: Map of the distribution of the vegetation plots in Montenegro.
