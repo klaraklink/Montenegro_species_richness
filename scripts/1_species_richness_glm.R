@@ -1,5 +1,6 @@
 # Supplementary code to the article :
-# Friesová et al. (2026). Forest herb-layer species richness in the western Balkan diversity hotspot. Journal of Vegetation Science 37:e70167. https://doi.org/10.1111/jvs.70167
+# Friesová et al. (2026). Forest herb-layer species richness in the western Balkan diversity hotspot. 
+# Journal of Vegetation Science 37:e70167. https://doi.org/10.1111/jvs.70167
 
 # Author: Klára Friesová
 # Date: 2026-03-30
@@ -29,29 +30,23 @@ library(tidyverse) # version 2.0.0
 
 
 # load data ---------------------------------------------------------------
-head <- read_csv('data/Montenegro_species_richness_data.csv')
+head <- read_csv('data/Montenegro_species_richness_data.csv') |>
+  mutate(veg_type = fct_relevel(veg_type, 'evergreen oak', 'mixed deciduous', 'beech', 'pine', 'fir and spruce', 'riparian')) 
+
 
 # data exploration
 pdf('plots/pairs.pdf', height = 11.69, width = 16.54)
 pairs.panels(head, scale = T, gap = 0)
 dev.off()
 
-# variable selection
-head_eda <- head |>
-  mutate(veg_type = fct_relevel(veg_type, 'evergreen oak', 'mixed deciduous', 'beech', 'pine', 'fir and spruce', 'riparian'), 
-         SOIL_DEPTH = ifelse(SOIL_DEPTH > 30, 30, SOIL_DEPTH)) |> 
-  filter(!is.na(PH) & !is.na(twi_dem) & !is.na(hli_data) & PH != 0) |> 
-  select(richness_herb, veg_type, COV_TREES, COV_SHRUBS, cov_evergreen, SOIL_DEPTH, 
-         PH, hli_data, mean_annual_temp, annual_prec, prec_warm, tri) 
-
 # summary table for Table 1 
-head_sum <- head_eda |> 
+head_sum <- head |> 
   group_by(veg_type) |> 
   summarise(n = n(), across(c(richness_herb, COV_TREES:tri), 
                             list(min = min, mean = mean, max = max), na.rm = T))
 
 # log-transformation of skewed predictors
-head2 <- head_eda |> 
+head2 <- head |> 
   mutate(tri = log(tri))
 
 # check correlations and distributions after transformation
@@ -79,8 +74,8 @@ dev.off()
 
 m.0 <- glm.nb(richness_herb~1, data = head2)
 
-m.full <- glm.nb(richness_herb~(.-mean_annual_temp - veg_type - prec_warm + poly(prec_warm, 2) 
-                                 + poly(mean_annual_temp, 2))^2 - poly(mean_annual_temp, 2):poly(prec_warm, 2), data = head2)
+m.full <- glm.nb(richness_herb~(.-mean_annual_temp - veg_type - prec_warm + poly(prec_warm, 2) + 
+                                  poly(mean_annual_temp, 2))^2 - poly(mean_annual_temp, 2):poly(prec_warm, 2), data = head2)
 
 
 anova(m.0, m.full, test = "Chisq")
@@ -140,9 +135,6 @@ ggsave('plots/appendix_sp_richness_univariate_effects.png', width = 10, height =
 # model with vegetation types as predictor
 m_veg <- glm.nb(richness_herb ~ veg_type, data = head2)
 summary(m_veg)
-
-predict_response(m.step) |> plot()
-
 
 # model diagnostics
 autoplot(m.step)+

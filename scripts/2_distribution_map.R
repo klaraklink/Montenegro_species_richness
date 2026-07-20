@@ -1,5 +1,6 @@
 # Supplementary code to the article :
-# Friesová et al. (2026). Forest herb-layer species richness in the western Balkan diversity hotspot. Journal of Vegetation Science 37:e70167. https://doi.org/10.1111/jvs.70167
+# Friesová et al. (2026). Forest herb-layer species richness in the western Balkan diversity hotspot. 
+# Journal of Vegetation Science 37:e70167. https://doi.org/10.1111/jvs.70167
 
 # Author: Klára Friesová
 # Date: 2026-03-30
@@ -24,8 +25,7 @@ library(tidyverse) # version 2.0.0
 # load data ---------------------------------------------------------------
 
 head <- read_csv('data/Montenegro_species_richness_data.csv') |> 
-  mutate(veg_type = fct_relevel(veg_type, 'evergreen oak', 'mixed deciduous', 'beech', 'pine', 'fir and spruce', 'riparian')) |> 
-  filter(!is.na(PH) & !is.na(twi_dem) & !is.na(hli_data) & PH != 0)
+  mutate(veg_type = fct_relevel(veg_type, 'evergreen oak', 'mixed deciduous', 'beech', 'pine', 'fir and spruce', 'riparian')) 
 
 
 # montenegro borders

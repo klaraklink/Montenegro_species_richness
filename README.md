@@ -2,7 +2,7 @@
 
 ## Supplementary code and data to the article:
 
-Friesová, K., Pustková, Š., Hubatka, P., Janišová, N., Nejeschlebová, K., Rohel, J., Sobotka, V., Šmerdová, E., Večeřa, M., Kadaš, D., Kopčan, B., Krejčová, M., Kučerová, A., Axmanová, I., Dřevojan, P., Janišová, M., Nikolei, R., Szokala, D., Stanišić-Vujačić, M., Stešević, D., Danihelka, J. & Chytrý, M. (2026). Forest herb-layer species richness in the western Balkan diversity hotspot. Journal of Vegetation Science 37:e70167. https://doi.org/10.1111/jvs.70167
+Friesová, K., Pustková, Š., Hubatka, P., Janišová, N., Nejeschlebová, K., Rohel, J., Sobotka, V., Šmerdová, E., Večeřa, M., Kadaš, D., Kopčan, B., Krejčová, M., Kučerová, A., Axmanová, I., Dřevojan, P., Janišová, M., Nikolei, R., Szokala, D., Stanišić-Vujačić, M., Stešević, D., Danihelka, J. & Chytrý, M. (2026). Forest herb-layer species richness in the western Balkan diversity hotspot. Journal of Vegetation Science 37:e70167. <https://doi.org/10.1111/jvs.70167>
 
 ## Data
 
@@ -12,8 +12,7 @@ This dataset includes information on the number of vascular plant species in the
 
 Soil samples for pH measurements were taken from five locations in each plot (the centres of each plot quarter and the plot centre) and mixed within that plot. In plots with a high proportion of rocks, locations for taking the soil samples might have been slightly moved to a place with developed soil. The soil samples were collected from the mineral soil horizon at a depth of 5–10 cm below the litter layer. The samples were dried at room temperature, sieved (mesh size 2 mm), mixed into soil-distilled water suspension (weight ratio 1:2.5) and shaken in the Biosan PSU-10i orbital shaker for 5 minutes at 280 rpm. The pH was measured using the HQ40D digital multimeter (Hach Lange GmbH, Düsseldorf, Germany). Soil depth was measured in five places in each plot (the centres of each plot quarter and the plot centre). An arbitrary value of 30 cm was assigned to soils deeper than 30 cm. The five measurements were then averaged.
 
-The heat load index was calculated from the in-situ measured slope, aspect, and inclination using the formula from McCune and Keon (2002: Eq. 3). In addition, we included the terrain ruggedness index as a
-measure of topographic heterogeneity (Geomorpho90m, Amatulli et al., 2020). We also included climatic variables: the mean annual temperature, total annual precipitation and precipitation of the warmest quarter (CHELSA, Karger et al., 2017).
+The heat load index was calculated from the in-situ measured slope, aspect, and inclination using the formula from McCune and Keon (2002: Eq. 3). In addition, we included the terrain ruggedness index as a measure of topographic heterogeneity (Geomorpho90m, Amatulli et al., 2020). We also included climatic variables: the mean annual temperature, total annual precipitation and precipitation of the warmest quarter (CHELSA, Karger et al., 2017).
 
 We georeferenced the plots with a GNSS device in the middle of each plot with an accuracy of \~2–10 m. In addition, plots sampled in 2025 were permanently marked in the field using a nail with a magnet placed in the lower left corner along the slope of each plot to allow for more precise plot relocation in the future. Coordinates were measured in the same place where the magnet was placed.
 

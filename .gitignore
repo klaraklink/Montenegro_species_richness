@@ -5,3 +5,5 @@
 .Rproj
 shps/*
 Montenegro_species_richness_public.Rproj
+data/XX_Montenegro_species_richness_data.csv
+scripts/XX_data_modification.R
