@@ -1,5 +1,5 @@
 # Supplementary code to the article :
-# Friesová et al. Forest herb-layer species richness in the western Balkan diversity hotspot
+# Friesová et al. (2026). Forest herb-layer species richness in the western Balkan diversity hotspot. Journal of Vegetation Science 37:e70167. https://doi.org/10.1111/jvs.70167
 
 # Author: Klára Friesová
 # Date: 2026-03-30
