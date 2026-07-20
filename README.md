@@ -2,7 +2,7 @@
 
 ## Supplementary code and data to the article:
 
-Friesová, K., Pustková, Š., Hubatka, P., Janišová, N., Nejeschlebová, K., Rohel, J., Sobotka, V., Šmerdová, E., Večeřa, M., Kadaš, D., Kopčan, B., Krejčová, M., Kučerová, A., Axmanová, I., Dřevojan, P., Janišová, M., Nikolei, R., Szokala, D., Stanišić-Vujačić, M., Stešević, D., Danihelka, J. & Chytrý, M. (2026). Forest herb-layer species richness in the western Balkan diversity hotspot. Journal of Vegetation Science.
+Friesová, K., Pustková, Š., Hubatka, P., Janišová, N., Nejeschlebová, K., Rohel, J., Sobotka, V., Šmerdová, E., Večeřa, M., Kadaš, D., Kopčan, B., Krejčová, M., Kučerová, A., Axmanová, I., Dřevojan, P., Janišová, M., Nikolei, R., Szokala, D., Stanišić-Vujačić, M., Stešević, D., Danihelka, J. & Chytrý, M. (2026). Forest herb-layer species richness in the western Balkan diversity hotspot. Journal of Vegetation Science 37:e70167. https://doi.org/10.1111/jvs.70167
 
 ## Data
 
